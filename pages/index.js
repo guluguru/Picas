@@ -180,6 +180,10 @@ function App({ fonts }) {
     setFontFamily({ target: { value: randomFont.name } })
   }
 
+  function goBack() {
+    console.log("goBack showing", fonts)
+  }
+
   const big = {
     width: 1024,
     height: 1024 * 0.618 / 2
@@ -232,6 +236,7 @@ function App({ fonts }) {
             </span>
           </p>
           <p className="control">
+            <a className="button is-primary" onClick={goBack}></a>
             <a className="button is-primary" onClick={random}>
               I am feeling lucky!
             </a>
